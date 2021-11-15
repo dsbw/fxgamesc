@@ -11,5 +11,5 @@
                  [org.openjfx/javafx-web "17"]
                  [org.openjfx/javafx-fxml "17"]
                  [org.openjfx/javafx-graphics "17"]]
-  :aot [fxgamesc.Controller]
+  :aot [fxgamesc.Controller fxgamesc.TileController fxgamesc.ttt.TttController]
   :repl-options {:init-ns fxgamesc.core})

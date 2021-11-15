@@ -31,3 +31,6 @@
   `(if (Platform/isFxApplicationThread)
      (deliver (promise) (do ~@body))
      (run-later ~@body)))
+
+(initialize)
+
