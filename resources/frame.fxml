@@ -9,7 +9,7 @@
    <top>
       <ButtonBar fx:id="buttonBar" buttonOrder="U" prefHeight="75.0" prefWidth="354.0" BorderPane.alignment="CENTER">
          <buttons>
-            <Button text="_Back" />
+            <Button text="_Back" onAction="#navigateBackwards" />
             <Button id="new" text="_New" />
             <Button id="save" text="_Save" />
             <Button id="load" text="_Load" />

@@ -33,6 +33,7 @@
            tl (Timeline.)
            _ (.add (.getKeyFrames tl) kf)
            _ (.setOnFinished tl (proxy [EventHandler] [] (handle [e] (.setAll (.getChildren owner) (into-array [n])))))
-           _ (.play tl)])))
+           _ (.play tl)]
+       (add-raw :active n))))
   ([new-node]
    (activate new-node (:central @nodes))))

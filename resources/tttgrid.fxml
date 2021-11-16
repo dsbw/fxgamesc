@@ -18,7 +18,7 @@
     <center>
         <Group fx:id="innerGroup">
             <children>
-                <GridPane fx:id="board" gridLinesVisible="true" layoutX="0.5" layoutY="0.5" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="400.0">
+                <GridPane fx:id="board" gridLinesVisible="true" layoutX="0.5" layoutY="0.5" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="400.0" onDragOver="#onDragOver" onDragDropped="#onDragDrop">
                     <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -45,7 +45,7 @@
                             <children>
                                 <Label contentDisplay="RIGHT" prefHeight="25.0" prefWidth="159.0" text="Player 1">
                                     <graphic>
-                                        <TextField fx:id="player1" prefHeight="25.0" prefWidth="95.0" />
+                                        <TextField fx:id="player1" prefHeight="25.0" prefWidth="95.0"/>
                                     </graphic>
                                 </Label>
                                 <Label contentDisplay="RIGHT" text="Player 2">
@@ -89,12 +89,12 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <ImageView id="X" fx:id="X" fitHeight="79.0" fitWidth="105.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView id="X" fx:id="X" fitHeight="79.0" fitWidth="105.0" pickOnBounds="true" preserveRatio="true"  onDragDetected="#onDragDetected">
                     <image>
                         <Image url="@X.gif" />
                     </image>
                 </ImageView>
-                <ImageView id="O" fx:id="O" fitHeight="79.0" fitWidth="105.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                <ImageView id="O" fx:id="O" fitHeight="79.0" fitWidth="105.0" pickOnBounds="true" preserveRatio="true" onDragDetected="#onDragDetected" GridPane.rowIndex="1">
                     <image>
                         <Image url="@O.gif" />
                     </image>
